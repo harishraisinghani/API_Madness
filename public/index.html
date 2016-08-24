@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <title>API Madness</title>
+  </head>
+  <body>
+    
+  <script src="javascript/jquery-3.1.0.js"></script>
+    <script>
+      $(function () {
+        $.ajax({
+          method: 'get',
+          url: 'https://www.flickr.com/services/api/flickr.photos.search.html',
+          api_key:'b0739d83d22e1a2550a877d51c0c0eb1',
+          format: 'json',
+          tags: 'lighthouse',
+          success: function(someJSON) {
+            console.log(someJSON);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
