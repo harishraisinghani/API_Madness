@@ -1,6 +1,6 @@
 $(function () {
 
-  var PHOTO_LIMIT = 10;
+  var PHOTO_LIMIT = 4;
   var API_KEY = 'b0739d83d22e1a2550a877d51c0c0eb1';
 
   var photoURL = function(photo) {

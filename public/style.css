@@ -1,0 +1,15 @@
+img {
+  padding: 1px;
+  border:1px solid black;
+  display: block;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+body {
+  background-color: orange;
+}
