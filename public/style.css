@@ -13,3 +13,9 @@ h1 {
 body {
   background-color: orange;
 }
+
+p {
+  text-align: center;
+  font-family: arial;
+  font-size: 20px;
+}

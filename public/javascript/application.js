@@ -10,7 +10,9 @@ $(function () {
 
   var showPhoto = function(index) {
     $('#photo'+index).fadeIn(2500);
+    $('#title'+index).fadeIn(2500);
     if (index < PHOTO_LIMIT) {
+      $('#title'+index).fadeOut(2500);
       $('#photo'+index).fadeOut(2500,function(){
         showPhoto(index+1);
       });
@@ -30,12 +32,18 @@ $(function () {
     jsonpCallback: 'jsonFlickrApi',
     success: function (response) {
       var result = response.photos.photo;
+      var title;
       $.each(result,function(key, value) {
         if(key>PHOTO_LIMIT) return false;
+        title = value.title;
         $('<img>')
           .attr("id",'photo'+ key)
           .attr('src', photoURL(value))
           .appendTo('.lighthouse-pics').hide();
+
+        $('<p> Title: '+title+'</p>')
+          .attr("id",'title'+key)
+          .appendTo('.title').hide();
       });
       showPhoto(0);
     }
